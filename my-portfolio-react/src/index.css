@@ -1,0 +1,272 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY & TYPOGRAPHY
+========================= */
+body {
+    font-family: Georgia, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Aboreto', sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    font-family: 'Aboreto', sans-serif;
+    background: #333;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+nav {
+    font-family: 'Aboreto', sans-serif;
+    background: #555;
+    padding: 10px;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #555;
+    padding: 10px 20px;
+    display: none;          
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+#navbar.visible {
+    display: flex;         
+    opacity: 1;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+    font-family: 'Aboreto', sans-serif;
+    padding: 10px 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#darkModeBtn {
+    margin-left: auto;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#darkModeBtn:hover {
+    background-color: #555;
+}
+
+#nextSectionBtn {
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#nextSectionBtn {
+    margin-top: 30px;
+    background-color: #333;
+    color: white;
+}
+
+#nextSectionBtn:hover {
+    background-color: #555;
+}
+
+#scrollDownBtn {
+    position: absolute;       /* Position relative to hero */
+    bottom: 200px;             /* Distance from bottom of hero section */
+    left: 50%;                /* Center horizontally */
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    animation: pulse 2s infinite ease-in-out;
+}
+
+#scrollDownBtn:hover {
+    background-color: #f4f4f4;
+}
+/* Keyframes for gentle pulse */
+/* Keyframes for pulse + bounce effect */
+@keyframes pulseBounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+    25% {
+        transform: translateX(-50%) translateY(-8px) scale(1.05);
+    }
+    50% {
+        transform: translateX(-50%) translateY(0) scale(1.1);
+    }
+    75% {
+        transform: translateX(-50%) translateY(-8px) scale(1.05);
+    }
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+}
+
+.full-screen {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    position: relative;       /* Needed for absolute positioning of button */
+    background-color: #333;
+    color: white;
+    height: 100vh;            /* Full screen height */
+    display: flex;
+    align-items: center;      /* Center hero text vertically */
+    justify-content: center;  /* Center hero text horizontally */
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+.project {
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 5px solid #333;
+}
+
+/* =========================
+   SKILLS SECTION
+========================= */
+#skills {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode header,
+.dark-mode nav,
+.dark-mode section {
+    background-color: #1e1e1e;
+}
+
+.dark-mode nav ul li a {
+    color: #f4f4f4;
+}
+
+.dark-mode #skills {
+    background-color: #1e1e1e;  /* Dark background for section */
+}
+
+.dark-mode .skill {
+    background-color: #555;     /* Darker skill boxes */
+    color: #f4f4f4;             /* Text color for contrast */
+}

@@ -1,0 +1,28 @@
+.sparkle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: #f0f0f0;  /* silver-white */
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.9;
+  transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0 0 8px 2px #f0f0f0; /* subtle glow for star effect */
+  animation: sparkle 0.7s forwards;
+  z-index: 9999;
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+}

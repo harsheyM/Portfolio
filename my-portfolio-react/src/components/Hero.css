@@ -1,0 +1,52 @@
+.hero {
+    position: relative;             /* Needed for absolute button */
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;            /* Centers hero-content vertically */
+    justify-content: center;        /* Centers hero-content horizontally */
+    text-align: center;
+}
+
+.hero-content {
+    z-index: 1;                     /* ensures content is above the button */
+}
+
+/* Explore button */
+#scrollDownBtn {
+    position: absolute;
+    bottom: 200px;                   /* distance from bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+
+    /* Animation */
+    animation: pulseBounce 2s infinite ease-in-out;
+}
+
+#scrollDownBtn:hover {
+    background-color: #f4f4f4;
+}
+
+/* Pulse + gentle bounce animation */
+@keyframes pulseBounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+    25% {
+        transform: translateX(-50%) translateY(-8px) scale(1.05);
+    }
+    50% {
+        transform: translateX(-50%) translateY(0) scale(1.1);
+    }
+    75% {
+        transform: translateX(-50%) translateY(-8px) scale(1.05);
+    }
+}
