@@ -22,6 +22,13 @@ function Projects() {
       summary: 'Improved dataset and neural network accuracy.',
       skills: 'Python, Neural Networks, Data Analysis',
       details: 'Worked on improving a dataset of 200+ images to increase its accuracy during performance. Utilized skills in Python coding and understanding of neural networks to increase accuracy to 97% on the validation dataset. Learned to split both testing and training, defined and filtered the data used for testing and training the AI model. Applied skills in data analysis to make conclusions about the information provided and returned.'
+    },
+
+    {
+      title: 'Smart Task Manager',
+      summary: 'Organize tasks by priority with AI assistance.',
+      skills: 'SQL, REST APIs, AI',
+      details: 'Developed a smart task manager application that helps users organize and prioritize their tasks using AI assistance. Implemented a backend using SQL for efficient data storage and retrieval, and created RESTful APIs to facilitate communication between the frontend and backend. Integrated AI algorithms to analyze task urgency and importance, providing users with intelligent suggestions for task prioritization.'
     }
   ];
 
