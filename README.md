@@ -1,1 +1,1 @@
-A portfolio containing contact information and details about my projets and skills.
+A portfolio containing contact information and details about my projects and skills.
